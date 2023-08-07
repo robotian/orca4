@@ -11,11 +11,15 @@ if(BUILD_TESTING)
 endif()
 
 # Install scripts
-install(
-  PROGRAMS
-  scripts/dump_rosout.py
-  scripts/mission_runner.py
+install(  
+  PROGRAMS scripts/dump_rosout.py  scripts/mission_runner.py
   DESTINATION lib/${PROJECT_NAME}
 )
+
+# install(DIRECTORY
+#   launch
+#   DESTINATION share/${PROJECT_NAME}/
+# )
+
 
 ament_auto_package(INSTALL_TO_SHARE behavior_trees cfg launch params)
