@@ -103,6 +103,7 @@
         <link_name>seg_link</link_name>
         <namespace>seg_bar</namespace>
         <min_volume>0.0</min_volume>
+        <!-- You need to calculate the proper density values-->
         <neutral_volume>0.00000001</neutral_volume>
         <default_volume>0.00000002</default_volume>
         <max_volume>0.00000003</max_volume>
