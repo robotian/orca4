@@ -76,6 +76,17 @@ def add_visual2parent(parentEl, tagName, visPose, geoType, var1, var2):
     
     parentEl.append(el)
 
+def add_collision2parent(parentEl, tagName, visPose, geoType, var1, var2):
+    el = ET.Element('collision',{'name':tagName})
+    add_pose2parent(el,visPose)
+
+    #cylinder
+    if geoType == 'cylinder':
+        add_cylinder2parent(el, var1, var2)
+
+    
+    parentEl.append(el)
+
 
 def add_axis2parent(parentEl, expressed_in, xyz):
     el = ET.Element('axis')
@@ -118,6 +129,7 @@ def add_cable_seg(input_path, output_path):
             lnName = 'seg'+str(segNum)+'_'+lt
             jntName = lnName + '_jnt'
             visName = lnName + '_vis'
+            colName = lnName + '_col'
 
             if lt == 'pitch':
                 if segNum == 1:
@@ -152,6 +164,8 @@ def add_cable_seg(input_path, output_path):
             add_pose2parent(subEl,link_pose,preLink)
             add_inertial2parent(subEl,link_inertia[0],link_inertia[1],link_inertia[2],link_inertia[3],link_inertia[4],link_inertia[5],link_inertia[6])
             add_visual2parent(subEl,visName,vis_pose, 'cylinder',cylinder_len, cylinder_rad)
+            if lt == 'body':
+                add_collision2parent(subEl,colName,vis_pose, 'cylinder',cylinder_len, cylinder_rad)
 
             subEl = ET.SubElement(root[0],'joint',attrib={'name':jntName,'type':'revolute'})
             add_pose2parent(subEl,jnt_pose)
@@ -160,7 +174,20 @@ def add_cable_seg(input_path, output_path):
             add_axis2parent(subEl,preLink,jnt_axis)
 
 
-            if lt == 'body':
+            if lt == 'body':                
+
+                subEl = ET.SubElement(root[0],'plugin',attrib={'filename':'gz-sim-buoyancy-engine-system','name':'gz::sim::systems::BuoyancyEngine'})
+                add_tagwithText(subEl,'link_name',lnName)
+                # <namespace>seg_bar</namespace>
+                add_tagwithText(subEl,'namespace','cable')
+                add_tagwithText(subEl,'min_volume','0.0000')
+                add_tagwithText(subEl,'neutral_volume','0.00000001')
+                add_tagwithText(subEl,'default_volume','0.00000002')
+                add_tagwithText(subEl,'max_volume','0.00000003')
+                add_tagwithText(subEl,'max_inflation_rate','0.000000001')
+                add_tagwithText(subEl,'surface','0.0')
+
+
                 subEl = ET.SubElement(root[0],'plugin',attrib={'filename':'gz-sim-hydrodynamics-system','name':'gz::sim::systems::Hydrodynamics'})
                 add_tagwithText(subEl,'link_name',lnName)
                 add_tagwithText(subEl,'water_density','1000')
