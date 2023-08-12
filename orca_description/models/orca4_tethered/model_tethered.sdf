@@ -554,6 +554,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg1_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg1_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -567,6 +576,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg1_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg1_body</link_name>
 			<water_density>1000</water_density>
@@ -681,6 +700,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg2_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg2_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -694,6 +722,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg2_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg2_body</link_name>
 			<water_density>1000</water_density>
@@ -808,6 +846,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg3_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg3_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -821,6 +868,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg3_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg3_body</link_name>
 			<water_density>1000</water_density>
@@ -935,6 +992,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg4_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg4_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -948,6 +1014,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg4_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg4_body</link_name>
 			<water_density>1000</water_density>
@@ -1062,6 +1138,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg5_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg5_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1075,6 +1160,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg5_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg5_body</link_name>
 			<water_density>1000</water_density>
@@ -1189,6 +1284,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg6_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg6_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1202,6 +1306,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg6_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg6_body</link_name>
 			<water_density>1000</water_density>
@@ -1316,6 +1430,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg7_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg7_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1329,6 +1452,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg7_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg7_body</link_name>
 			<water_density>1000</water_density>
@@ -1443,6 +1576,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg8_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg8_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1456,6 +1598,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg8_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg8_body</link_name>
 			<water_density>1000</water_density>
@@ -1570,6 +1722,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg9_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg9_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1583,6 +1744,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg9_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg9_body</link_name>
 			<water_density>1000</water_density>
@@ -1697,6 +1868,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg10_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg10_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1710,6 +1890,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg10_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg10_body</link_name>
 			<water_density>1000</water_density>
@@ -1824,6 +2014,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg11_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg11_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1837,6 +2036,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg11_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg11_body</link_name>
 			<water_density>1000</water_density>
@@ -1951,6 +2160,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg12_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg12_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -1964,6 +2182,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg12_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg12_body</link_name>
 			<water_density>1000</water_density>
@@ -2078,6 +2306,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg13_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg13_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2091,6 +2328,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg13_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg13_body</link_name>
 			<water_density>1000</water_density>
@@ -2205,6 +2452,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg14_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg14_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2218,6 +2474,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg14_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg14_body</link_name>
 			<water_density>1000</water_density>
@@ -2332,6 +2598,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg15_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg15_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2345,6 +2620,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg15_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg15_body</link_name>
 			<water_density>1000</water_density>
@@ -2459,6 +2744,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg16_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg16_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2472,6 +2766,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg16_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg16_body</link_name>
 			<water_density>1000</water_density>
@@ -2586,6 +2890,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg17_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg17_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2599,6 +2912,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg17_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg17_body</link_name>
 			<water_density>1000</water_density>
@@ -2713,6 +3036,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg18_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg18_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2726,6 +3058,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg18_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg18_body</link_name>
 			<water_density>1000</water_density>
@@ -2840,6 +3182,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg19_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg19_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2853,6 +3204,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg19_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg19_body</link_name>
 			<water_density>1000</water_density>
@@ -2967,6 +3328,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg20_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg20_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -2980,6 +3350,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg20_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg20_body</link_name>
 			<water_density>1000</water_density>
@@ -3094,6 +3474,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg21_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg21_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3107,6 +3496,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg21_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg21_body</link_name>
 			<water_density>1000</water_density>
@@ -3221,6 +3620,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg22_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg22_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3234,6 +3642,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg22_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg22_body</link_name>
 			<water_density>1000</water_density>
@@ -3348,6 +3766,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg23_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg23_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3361,6 +3788,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg23_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg23_body</link_name>
 			<water_density>1000</water_density>
@@ -3475,6 +3912,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg24_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg24_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3488,6 +3934,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg24_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg24_body</link_name>
 			<water_density>1000</water_density>
@@ -3602,6 +4058,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg25_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg25_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3615,6 +4080,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg25_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg25_body</link_name>
 			<water_density>1000</water_density>
@@ -3729,6 +4204,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg26_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg26_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3742,6 +4226,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg26_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg26_body</link_name>
 			<water_density>1000</water_density>
@@ -3856,6 +4350,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg27_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg27_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3869,6 +4372,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg27_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg27_body</link_name>
 			<water_density>1000</water_density>
@@ -3983,6 +4496,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg28_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg28_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -3996,6 +4518,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg28_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg28_body</link_name>
 			<water_density>1000</water_density>
@@ -4110,6 +4642,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg29_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg29_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4123,6 +4664,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg29_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg29_body</link_name>
 			<water_density>1000</water_density>
@@ -4237,6 +4788,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg30_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg30_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4250,6 +4810,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg30_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg30_body</link_name>
 			<water_density>1000</water_density>
@@ -4364,6 +4934,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg31_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg31_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4377,6 +4956,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg31_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg31_body</link_name>
 			<water_density>1000</water_density>
@@ -4491,6 +5080,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg32_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg32_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4504,6 +5102,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg32_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg32_body</link_name>
 			<water_density>1000</water_density>
@@ -4618,6 +5226,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg33_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg33_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4631,6 +5248,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg33_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg33_body</link_name>
 			<water_density>1000</water_density>
@@ -4745,6 +5372,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg34_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg34_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4758,6 +5394,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg34_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg34_body</link_name>
 			<water_density>1000</water_density>
@@ -4872,6 +5518,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg35_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg35_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -4885,6 +5540,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg35_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg35_body</link_name>
 			<water_density>1000</water_density>
@@ -4999,6 +5664,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg36_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg36_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5012,6 +5686,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg36_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg36_body</link_name>
 			<water_density>1000</water_density>
@@ -5126,6 +5810,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg37_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg37_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5139,6 +5832,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg37_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg37_body</link_name>
 			<water_density>1000</water_density>
@@ -5253,6 +5956,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg38_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg38_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5266,6 +5978,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg38_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg38_body</link_name>
 			<water_density>1000</water_density>
@@ -5380,6 +6102,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg39_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg39_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5393,6 +6124,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg39_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg39_body</link_name>
 			<water_density>1000</water_density>
@@ -5507,6 +6248,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg40_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg40_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5520,6 +6270,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg40_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg40_body</link_name>
 			<water_density>1000</water_density>
@@ -5634,6 +6394,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg41_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg41_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5647,6 +6416,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg41_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg41_body</link_name>
 			<water_density>1000</water_density>
@@ -5761,6 +6540,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg42_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg42_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5774,6 +6562,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg42_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg42_body</link_name>
 			<water_density>1000</water_density>
@@ -5888,6 +6686,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg43_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg43_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -5901,6 +6708,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg43_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg43_body</link_name>
 			<water_density>1000</water_density>
@@ -6015,6 +6832,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg44_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg44_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6028,6 +6854,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg44_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg44_body</link_name>
 			<water_density>1000</water_density>
@@ -6142,6 +6978,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg45_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg45_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6155,6 +7000,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg45_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg45_body</link_name>
 			<water_density>1000</water_density>
@@ -6269,6 +7124,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg46_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg46_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6282,6 +7146,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg46_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg46_body</link_name>
 			<water_density>1000</water_density>
@@ -6396,6 +7270,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg47_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg47_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6409,6 +7292,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg47_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg47_body</link_name>
 			<water_density>1000</water_density>
@@ -6523,6 +7416,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg48_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg48_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6536,6 +7438,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg48_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg48_body</link_name>
 			<water_density>1000</water_density>
@@ -6650,6 +7562,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg49_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg49_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6663,6 +7584,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg49_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg49_body</link_name>
 			<water_density>1000</water_density>
@@ -6777,6 +7708,15 @@
 					</cylinder>
 				</geometry>
 			</visual>
+			<collision name="seg50_body_col">
+				<pose>0 0 0 0 1.5707963267948966 0</pose>
+				<geometry>
+					<cylinder>
+						<length>0.4</length>
+						<radius>0.01</radius>
+					</cylinder>
+				</geometry>
+			</collision>
 		</link>
 		<joint name="seg50_body_jnt" type="revolute">
 			<pose>0.2 0 0 0 0 0</pose>
@@ -6790,6 +7730,16 @@
 				</limit>
 			</axis>
 		</joint>
+		<plugin filename="gz-sim-buoyancy-engine-system" name="gz::sim::systems::BuoyancyEngine">
+			<link_name>seg50_body</link_name>
+			<namespace>cable</namespace>
+			<min_volume>0.0000</min_volume>
+			<neutral_volume>0.00000001</neutral_volume>
+			<default_volume>0.00000002</default_volume>
+			<max_volume>0.00000003</max_volume>
+			<max_inflation_rate>0.000000001</max_inflation_rate>
+			<surface>0.0</surface>
+		</plugin>
 		<plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
 			<link_name>seg50_body</link_name>
 			<water_density>1000</water_density>
@@ -6813,6 +7763,4 @@
 			<nRabsR>-0.0001</nRabsR>
 		</plugin>
 	</model>
-
-	
 </sdf>
