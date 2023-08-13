@@ -137,7 +137,6 @@ def add_cable_seg(input_path, output_path):
             colName = lnName + '_col'
 
             if lt == 'pitch':
-                # link_pose = '0 0 0 0 0 0'
                 if segNum == numOfseg:
                     link_pose = '0 0 0 0 0 0'
                 else:
