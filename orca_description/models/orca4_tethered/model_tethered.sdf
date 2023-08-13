@@ -4878,7 +4878,7 @@
 			</axis>
 		</joint>
 		<link name="seg0_yaw">
-			<pose relative_to="seg0_pitch">0 0 0 0 0 0</pose>
+			<pose relative_to="seg0_pitch">0 0 0 0 1.5707963267948966 0</pose>
 			<inertial>
 				<mass>1e-10</mass>
 				<inertia>

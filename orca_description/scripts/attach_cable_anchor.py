@@ -149,7 +149,10 @@ def add_cable_seg(input_path, output_path):
                 jnt_pose = '0 0 0 0 0 0'
                 link_inertia = [small_mass,small_inertia,'0','0',small_inertia,'0',small_inertia]
             elif lt == 'yaw':
-                link_pose = '0 0 0 0 0 0'
+                if segNum == 0:
+                    link_pose = '0 0 0 0 1.5707963267948966 0'
+                else:
+                    link_pose = '0 0 0 0 0 0'
                 vis_pose = '0 0 0 0 0 0'
                 cylinder_len = '0.02'
                 cylinder_rad = '0.01'
