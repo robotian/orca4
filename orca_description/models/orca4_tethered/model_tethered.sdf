@@ -601,12 +601,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg2_pitch">
 			<pose relative_to="seg1_body">-0.2 0 0 0 0 0</pose>
@@ -747,12 +747,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg3_pitch">
 			<pose relative_to="seg2_body">-0.2 0 0 0 0 0</pose>
@@ -893,12 +893,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg4_pitch">
 			<pose relative_to="seg3_body">-0.2 0 0 0 0 0</pose>
@@ -1039,12 +1039,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg5_pitch">
 			<pose relative_to="seg4_body">-0.2 0 0 0 0 0</pose>
@@ -1185,12 +1185,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg6_pitch">
 			<pose relative_to="seg5_body">-0.2 0 0 0 0 0</pose>
@@ -1331,12 +1331,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg7_pitch">
 			<pose relative_to="seg6_body">-0.2 0 0 0 0 0</pose>
@@ -1477,12 +1477,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg8_pitch">
 			<pose relative_to="seg7_body">-0.2 0 0 0 0 0</pose>
@@ -1623,12 +1623,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg9_pitch">
 			<pose relative_to="seg8_body">-0.2 0 0 0 0 0</pose>
@@ -1769,12 +1769,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg10_pitch">
 			<pose relative_to="seg9_body">-0.2 0 0 0 0 0</pose>
@@ -1915,12 +1915,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg11_pitch">
 			<pose relative_to="seg10_body">-0.2 0 0 0 0 0</pose>
@@ -2061,12 +2061,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg12_pitch">
 			<pose relative_to="seg11_body">-0.2 0 0 0 0 0</pose>
@@ -2207,12 +2207,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg13_pitch">
 			<pose relative_to="seg12_body">-0.2 0 0 0 0 0</pose>
@@ -2353,12 +2353,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg14_pitch">
 			<pose relative_to="seg13_body">-0.2 0 0 0 0 0</pose>
@@ -2499,12 +2499,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg15_pitch">
 			<pose relative_to="seg14_body">-0.2 0 0 0 0 0</pose>
@@ -2645,12 +2645,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg16_pitch">
 			<pose relative_to="seg15_body">-0.2 0 0 0 0 0</pose>
@@ -2791,12 +2791,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg17_pitch">
 			<pose relative_to="seg16_body">-0.2 0 0 0 0 0</pose>
@@ -2937,12 +2937,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg18_pitch">
 			<pose relative_to="seg17_body">-0.2 0 0 0 0 0</pose>
@@ -3083,12 +3083,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg19_pitch">
 			<pose relative_to="seg18_body">-0.2 0 0 0 0 0</pose>
@@ -3229,12 +3229,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg20_pitch">
 			<pose relative_to="seg19_body">-0.2 0 0 0 0 0</pose>
@@ -3375,12 +3375,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg21_pitch">
 			<pose relative_to="seg20_body">-0.2 0 0 0 0 0</pose>
@@ -3521,12 +3521,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg22_pitch">
 			<pose relative_to="seg21_body">-0.2 0 0 0 0 0</pose>
@@ -3667,12 +3667,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg23_pitch">
 			<pose relative_to="seg22_body">-0.2 0 0 0 0 0</pose>
@@ -3813,12 +3813,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg24_pitch">
 			<pose relative_to="seg23_body">-0.2 0 0 0 0 0</pose>
@@ -3959,12 +3959,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg25_pitch">
 			<pose relative_to="seg24_body">-0.2 0 0 0 0 0</pose>
@@ -4105,12 +4105,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg26_pitch">
 			<pose relative_to="seg25_body">-0.2 0 0 0 0 0</pose>
@@ -4251,12 +4251,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg27_pitch">
 			<pose relative_to="seg26_body">-0.2 0 0 0 0 0</pose>
@@ -4397,12 +4397,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg28_pitch">
 			<pose relative_to="seg27_body">-0.2 0 0 0 0 0</pose>
@@ -4543,12 +4543,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg29_pitch">
 			<pose relative_to="seg28_body">-0.2 0 0 0 0 0</pose>
@@ -4689,12 +4689,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg30_pitch">
 			<pose relative_to="seg29_body">-0.2 0 0 0 0 0</pose>
@@ -4835,12 +4835,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg31_pitch">
 			<pose relative_to="seg30_body">-0.2 0 0 0 0 0</pose>
@@ -4981,12 +4981,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg32_pitch">
 			<pose relative_to="seg31_body">-0.2 0 0 0 0 0</pose>
@@ -5127,12 +5127,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg33_pitch">
 			<pose relative_to="seg32_body">-0.2 0 0 0 0 0</pose>
@@ -5273,12 +5273,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg34_pitch">
 			<pose relative_to="seg33_body">-0.2 0 0 0 0 0</pose>
@@ -5419,12 +5419,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg35_pitch">
 			<pose relative_to="seg34_body">-0.2 0 0 0 0 0</pose>
@@ -5565,12 +5565,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg36_pitch">
 			<pose relative_to="seg35_body">-0.2 0 0 0 0 0</pose>
@@ -5711,12 +5711,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg37_pitch">
 			<pose relative_to="seg36_body">-0.2 0 0 0 0 0</pose>
@@ -5857,12 +5857,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg38_pitch">
 			<pose relative_to="seg37_body">-0.2 0 0 0 0 0</pose>
@@ -6003,12 +6003,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg39_pitch">
 			<pose relative_to="seg38_body">-0.2 0 0 0 0 0</pose>
@@ -6149,12 +6149,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg40_pitch">
 			<pose relative_to="seg39_body">-0.2 0 0 0 0 0</pose>
@@ -6295,12 +6295,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg41_pitch">
 			<pose relative_to="seg40_body">-0.2 0 0 0 0 0</pose>
@@ -6441,12 +6441,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg42_pitch">
 			<pose relative_to="seg41_body">-0.2 0 0 0 0 0</pose>
@@ -6587,12 +6587,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg43_pitch">
 			<pose relative_to="seg42_body">-0.2 0 0 0 0 0</pose>
@@ -6733,12 +6733,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg44_pitch">
 			<pose relative_to="seg43_body">-0.2 0 0 0 0 0</pose>
@@ -6879,12 +6879,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg45_pitch">
 			<pose relative_to="seg44_body">-0.2 0 0 0 0 0</pose>
@@ -7025,12 +7025,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg46_pitch">
 			<pose relative_to="seg45_body">-0.2 0 0 0 0 0</pose>
@@ -7171,12 +7171,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg47_pitch">
 			<pose relative_to="seg46_body">-0.2 0 0 0 0 0</pose>
@@ -7317,12 +7317,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg48_pitch">
 			<pose relative_to="seg47_body">-0.2 0 0 0 0 0</pose>
@@ -7463,12 +7463,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg49_pitch">
 			<pose relative_to="seg48_body">-0.2 0 0 0 0 0</pose>
@@ -7609,12 +7609,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 		<link name="seg50_pitch">
 			<pose relative_to="seg49_body">-0.2 0 0 0 0 0</pose>
@@ -7755,12 +7755,12 @@
 			<kP>0</kP>
 			<mQ>0</mQ>
 			<nR>0</nR>
-			<xUabsU>-0.0005</xUabsU>
-			<yVabsV>-0.0005</yVabsV>
-			<zWabsW>-0.0005</zWabsW>
-			<kPabsP>-0.0001</kPabsP>
-			<mQabsQ>-0.0001</mQabsQ>
-			<nRabsR>-0.0001</nRabsR>
+			<xUabsU>-0.0000005</xUabsU>
+			<yVabsV>-0.0000005</yVabsV>
+			<zWabsW>-0.0000005</zWabsW>
+			<kPabsP>-0.0000001</kPabsP>
+			<mQabsQ>-0.0000001</mQabsQ>
+			<nRabsR>-0.0000001</nRabsR>
 		</plugin>
 	</model>
 </sdf>

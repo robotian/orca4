@@ -195,12 +195,12 @@ def add_cable_seg(input_path, output_path):
                     add_tagwithText(subEl,tg,'0')
                 for tg in ['xU','yV','zW','kP','mQ','nR']:
                     add_tagwithText(subEl,tg,'0')
-                add_tagwithText(subEl,'xUabsU','-0.0005')
-                add_tagwithText(subEl,'yVabsV','-0.0005')
-                add_tagwithText(subEl,'zWabsW','-0.0005')
-                add_tagwithText(subEl,'kPabsP','-0.0001')
-                add_tagwithText(subEl,'mQabsQ','-0.0001')
-                add_tagwithText(subEl,'nRabsR','-0.0001')
+                add_tagwithText(subEl,'xUabsU','-0.0000005')
+                add_tagwithText(subEl,'yVabsV','-0.0000005')
+                add_tagwithText(subEl,'zWabsW','-0.0000005')
+                add_tagwithText(subEl,'kPabsP','-0.0000001')
+                add_tagwithText(subEl,'mQabsQ','-0.0000001')
+                add_tagwithText(subEl,'nRabsR','-0.0000001')
 
             preLink = lnName
 
