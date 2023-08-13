@@ -75,3 +75,10 @@ You can use MAVProxy to drive the sub around the seafloor and build a map.
 The simulation uses Gazebo camera sensors to generate uncompressed 800x600 images in an
 ideal stereo configuration. The frame rate is throttled to 5Hz to reduce CPU load in ORB_SLAM2, but
 it can easily go higher.
+
+## Cable generation
+
+Use the 'attach_cable_anchor.py' file in the orca_description/scripts folder to generate the cablem model. 
+~~~
+python attach_cable_anchor.py ~/ros2_ws/src/orca4/orca_description/models/orca4_tethered/model.sdf ~/ros2_ws/src/orca4/orca_description/models/orca4_tethered/model_tethered.sdf
+~~~
