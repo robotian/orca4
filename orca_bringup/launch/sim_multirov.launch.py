@@ -43,10 +43,10 @@ def generate_launch_description():
     orca_bringup_dir = get_package_share_directory('orca_bringup')
     orca_description_dir = get_package_share_directory('orca_description')
 
-    ardusub_params_file = os.path.join(orca_bringup_dir, 'cfg', 'sub.parm')
-    mavros_params_file = os.path.join(orca_bringup_dir, 'params', 'sim_mavros_params.yaml')
-    orca_params_file = os.path.join(orca_bringup_dir, 'params', 'sim_orca_params.yaml')
-    rosbag2_record_qos_file = os.path.join(orca_bringup_dir, 'params', 'rosbag2_record_qos.yaml')
+    ardusub_params_file = os.path.join(orca_bringup_dir, 'cfg', 'sub.parm')  
+    mavros_params_file = os.path.join(orca_bringup_dir, 'params', 'sim_mavros_params_rov1.yaml')
+    orca_params_file = os.path.join(orca_bringup_dir, 'params', 'sim_orca_params_rov1.yaml')
+    # rosbag2_record_qos_file = os.path.join(orca_bringup_dir, 'params', 'rosbag2_record_qos.yaml')
     rviz_file = os.path.join(orca_bringup_dir, 'cfg', 'sim_launch.rviz')
     world_file = os.path.join(orca_description_dir, 'worlds', 'sand_empty.world')
 
@@ -102,30 +102,30 @@ def generate_launch_description():
         ),
 
         # Bag useful topics
-        ExecuteProcess(
-            cmd=[
-                'ros2', 'bag', 'record',
-                '--qos-profile-overrides-path', rosbag2_record_qos_file,
-                '--include-hidden-topics',
-                '/cmd_vel',
-                '/mavros/local_position/pose',
-                '/mavros/rc/override',
-                '/mavros/setpoint_position/global',
-                '/mavros/state',
-                '/mavros/vision_pose/pose',
-                '/model/orca4/odometry',
-                '/motion',
-                '/odom',
-                '/orb_slam2_stereo_node/pose',
-                '/orb_slam2_stereo_node/status',
-                '/pid_z',
-                '/rosout',
-                '/tf',
-                '/tf_static',
-            ],
-            output='screen',
-            condition=IfCondition(LaunchConfiguration('bag')),
-        ),
+        # ExecuteProcess(
+        #     cmd=[
+        #         'ros2', 'bag', 'record',
+        #         '--qos-profile-overrides-path', rosbag2_record_qos_file,
+        #         '--include-hidden-topics',
+        #         '/cmd_vel',
+        #         '/mavros/local_position/pose',
+        #         '/mavros/rc/override',
+        #         '/mavros/setpoint_position/global',
+        #         '/mavros/state',
+        #         '/mavros/vision_pose/pose',
+        #         '/model/orca4/odometry',
+        #         '/motion',
+        #         '/odom',
+        #         '/orb_slam2_stereo_node/pose',
+        #         '/orb_slam2_stereo_node/status',
+        #         '/pid_z',
+        #         '/rosout',
+        #         '/tf',
+        #         '/tf_static',
+        #     ],
+        #     output='screen',
+        #     condition=IfCondition(LaunchConfiguration('bag')),
+        # ),
 
         # Launch rviz
         ExecuteProcess(
@@ -138,9 +138,9 @@ def generate_launch_description():
         # ardusub must be on the $PATH, see src/orca4/setup.bash
         ExecuteProcess(
             cmd=['ardusub', '-S', '-w', '-M', 'JSON', '--defaults', ardusub_params_file,
-                 '-I0', '--home', '33.810313,-118.39386700000001,0.0,270.0'],
+                 '-I0', '--home', '33.810313,-118.39386700000001,0.0,270.0'],  # need to modify 
             output='screen',
-            condition=IfCondition(LaunchConfiguration('ardusub')),
+            condition=IfCondition(LaunchConfiguration('ardusub')), 
         ),
 
         # Launch Gazebo Sim
@@ -205,7 +205,7 @@ def generate_launch_description():
             package='ros_gz_bridge',
             executable='parameter_bridge',
             arguments=[
-                '/model/orca4/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+                '/model/tethered_rov1/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
             ],
             output='screen'
         ),
