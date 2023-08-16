@@ -31,11 +31,11 @@
         name="gz::sim::systems::Imu">
     </plugin>
 
-    <!-- Buoyancy plugin manages buoyancy for all models -->
+
+<!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
         filename="gz-sim-buoyancy-system"
-        name="gz::sim::systems::Buoyancy">
-      <!-- Fluid density is 1 (air) above 0 and 1000 (water) below 0 -->
+        name="gz::sim::systems::Buoyancy">      
       <graded_buoyancy>
         <default_density>1000</default_density>
         <density_change>
@@ -43,10 +43,15 @@
           <density>1</density>
         </density_change>
       </graded_buoyancy>
-      <!-- Enable by model name -->
-      <enable>orca4_tethered</enable>
-      
+      <!-- <enable>orca4_tethered</enable>       -->
     </plugin>
+
+    <!-- <plugin
+      filename="gz-sim-buoyancy-system"
+      name="gz::sim::systems::Buoyancy">
+      <uniform_fluid_density>1000</uniform_fluid_density>
+    </plugin> -->
+    
 
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
