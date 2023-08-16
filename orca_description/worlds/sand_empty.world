@@ -59,20 +59,21 @@
      <pose>0 0 0.2 0 0 0</pose>
     </include>
 
-    <include>
-      <name>rov1</name>
-      <uri>model://orca4_tethered</uri>
+
+    <model name="rov1">
       <pose>0 0 0 0 0 0</pose>
-    </include>
+      <include>
+        <uri>model://tethered_rov1</uri>
+      </include>
+    </model> 
+    
 
-
-    <include>
-      <name>rov2</name>
-      <uri>model://orca4_tethered</uri>
+    <model name="rov2">
       <pose>4 4 0 0 0 0</pose>
-    </include>
-
-
+      <include>
+        <uri>model://tethered_rov2</uri>
+      </include>
+    </model> 
 
   </world>
 </sdf>
