@@ -8,7 +8,7 @@
 #     tcp://[server_host][:port][/?ids=sysid,compid]
 #     tcp default port: 5760
 
-mavros:
+/**/mavros:
   ros__parameters:
     system_id: 255
 
@@ -29,19 +29,20 @@ mavros:
       - setpoint_position
       - vision_pose
 
-mavros_node:
+/**:
   ros__parameters:
-    fcu_url: "tcp://localhost"
-    # fcu_url: "udp://:14540@127.0.0.1:14580" 
+    fcu_url: "tcp://localhost"    
     gcs_url: "udp://@localhost:14550"
+    
 
-mavros/local_position:
+
+/**/mavros/local_position:
   ros__parameters:
     frame_id: "map"  # frame_id of /mavros/local_position/pose, etc.
     tf:
       send: false  # Do not publish tf
 
-mavros/vision_pose:
+/**/mavros/vision_pose:
   ros__parameters:
     tf:
       listen: false  # Do not listen to tf
