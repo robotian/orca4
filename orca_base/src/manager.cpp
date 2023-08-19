@@ -49,11 +49,18 @@ using GoalHandleTargetMode = rclcpp_action::ServerGoalHandle<TargetMode>;
 class Manager : public rclcpp::Node
 {
   // String constants
-  const std::string MAVROS_ARM_SRV = "/mavros/cmd/arming";
-  const std::string MAVROS_SET_MODE_SRV = "/mavros/set_mode";
-  const std::string MAVROS_SET_MSG_INTERVAL_SRV = "/mavros/set_message_interval";
-  const std::string NAV2_MGR_SRV = "/lifecycle_manager_navigation/manage_nodes";
-  const std::string BASE_SRV = "/conn";
+  const std::string MAVROS_ARM_SRV = "mavros/cmd/arming";
+  const std::string MAVROS_SET_MODE_SRV = "mavros/set_mode";
+  const std::string MAVROS_SET_MSG_INTERVAL_SRV = "mavros/set_message_interval";
+  const std::string NAV2_MGR_SRV = "lifecycle_manager_navigation/manage_nodes";
+  const std::string BASE_SRV = "conn";
+
+  // const std::string MAVROS_ARM_SRV = "/mavros/cmd/arming";
+  // const std::string MAVROS_SET_MODE_SRV = "/mavros/set_mode";
+  // const std::string MAVROS_SET_MSG_INTERVAL_SRV = "/mavros/set_message_interval";
+  // const std::string NAV2_MGR_SRV = "/lifecycle_manager_navigation/manage_nodes";
+  // const std::string BASE_SRV = "/conn";
+
 
   // Parameters
   std::vector<int64_t> mav_msg_ids_;
@@ -389,7 +396,8 @@ public:
     reliable.reliable();
 
     state_sub_ = create_subscription<mavros_msgs::msg::State>(
-      "/mavros/state", reliable,
+      "mavros/state", reliable,
+      // "/mavros/state", reliable,
       [this](mavros_msgs::msg::State::ConstSharedPtr msg) // NOLINT
       {
         if (ardusub_connected_ != msg->connected) {
@@ -440,7 +448,8 @@ public:
       });
 
     ekf_pose_sub_ = create_subscription<geometry_msgs::msg::PoseStamped>(
-      "/mavros/local_position/pose", best_effort,
+      "mavros/local_position/pose", best_effort,
+      // "/mavros/local_position/pose", best_effort,
       [this](geometry_msgs::msg::PoseStamped::ConstSharedPtr) // NOLINT
       {
         if (!have_pose_) {
