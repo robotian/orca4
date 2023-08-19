@@ -12,7 +12,7 @@ endif()
 
 # Install scripts
 install(  
-  PROGRAMS scripts/dump_rosout.py  scripts/mission_runner.py
+  PROGRAMS scripts/dump_rosout.py  scripts/mission_runner.py scripts/mission_runner_rov1.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -122,11 +122,17 @@ def generate_launch_description():
         Node(
             package='mavros',
             executable='mavros_node',
-            namespace = namespace,
+            namespace = f"{tf_prefix}/mavros",
             output='screen',
             # mavros_node is actually many nodes, so we can't override the name
             # name='mavros_node',            
-            parameters=[mavros_params_file],
+            parameters=[
+                mavros_params_file,
+                {
+                    "fcu_url": "tcp://localhost",
+                    "gcs_url": "udp://@localhost:14550",                            
+                }
+            ],
             # parameters=[{
             #     "fcu_url": "tcp://localhost",
             #     "gcs_url": "udp://@localhost:14550"
@@ -169,6 +175,7 @@ def generate_launch_description():
             cmd=['/opt/ros/humble/lib/tf2_ros/static_transform_publisher',
                  '--frame-id', f"{tf_prefix}/map",
                  '--child-frame-id', f"{tf_prefix}/slam"],
+            # name='map2slam_static_tf_publisher',
             output='screen',
             condition=UnlessCondition(LaunchConfiguration('base')),
         ),
@@ -221,9 +228,9 @@ def generate_launch_description():
             }],
             namespace = namespace,
             remappings=[
-                ('image_left/image_color_rect', 'stereo_left'),
-                ('image_right/image_color_rect', 'stereo_right'),
-                ('camera/camera_info', 'stereo_right/camera_info'),
+                ('/image_left/image_color_rect', 'stereo_left'),
+                ('/image_right/image_color_rect', 'stereo_right'),
+                ('/camera/camera_info', 'stereo_right/camera_info'),
             ],
             condition=IfCondition(LaunchConfiguration('slam')),
         ),
