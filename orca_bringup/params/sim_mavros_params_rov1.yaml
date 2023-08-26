@@ -23,45 +23,55 @@
     plugin_allowlist:
       - sys_status
       - command
-      - imu      
+      - imu
+      - local_position
       - rc_io
       - setpoint_position
-
-    plugin_blacklist:      
-      - '*'
-      # - local_position
-      # - vision_pose
-
-# /mavros_node:
+      - vision_pose
+      # - time
+  
+# /**/mavros/time:
 #   ros__parameters:
-#     fcu_url: "tcp://localhost"    
-#     gcs_url: "udp://@localhost:14550"
+#     time_ref_source: "fcu"  # time_reference source
+#     timesync_mode: "MAVLINK"
+#     timesync_avg_alpha: 0.6 # timesync averaging factor
+#     publish_sim_time: false
+
+
+/**/mavros_node:
+  ros__parameters:
+    fcu_url: "tcp://localhost:5760"    
+    gcs_url: "udp://@localhost:14560"
+    # fcu_url: "udp://:14550@127.0.0.1:14555"       
+    # gcs_url: ""
+    tgt_system: 1
+    tgt_component: 1
     
 
 
-# /**/mavros/local_position:
-#   ros__parameters:
-#     frame_id: "rov1/map"  # frame_id of /mavros/local_position/pose, etc.
-#     tf:
-#       send: false  # Do not publish tf
+/**/mavros/local_position:
+  ros__parameters:
+    frame_id: "rov1/map"  # frame_id of /mavros/local_position/pose, etc.
+    tf:
+      send: false  # Do not publish tf
 
-# /**/mavros/vision_pose:
-#   ros__parameters:
-#     tf:
-#       listen: false  # Do not listen to tf
+/**/mavros/vision_pose:
+  ros__parameters:
+    tf:
+      listen: false  # Do not listen to tf
 
 
 
 # ### Newly added
 
 # # setpoint_position
-# /**/mavros/setpoint_position:
-#   ros__parameters:
-#     tf.listen: false           # enable tf listener (disable topic subscribers)
-#     tf.frame_id: "map"
-#     tf.child_frame_id: "target_position"
-#     tf.rate_limit: 50.0
-#     mav_frame: LOCAL_NED
+/**/mavros/setpoint_position:
+  ros__parameters:
+    tf.listen: false           # enable tf listener (disable topic subscribers)
+    tf.frame_id: "/rov1/map"
+    tf.child_frame_id: "/rov1/base_link"
+    tf.rate_limit: 50.0
+    mav_frame: LOCAL_NED  #GLOBAL_INT
 
 # # vision_pose_estimate
 # /**/mavros/vision_pose:
@@ -85,10 +95,10 @@
 # # local_position
 # /**/mavros/local_position:
 #   ros__parameters:
-#     frame_id: "map"
+#     frame_id: "rov1/map"
 #     tf.send: false
-#     tf.frame_id: "map"
-#     tf.child_frame_id: "base_link"
+#     tf.frame_id: "rov1/map"
+#     tf.child_frame_id: "rov1/base_link"
 #     tf.send_fcu: false
 
 # # rc_io

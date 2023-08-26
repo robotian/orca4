@@ -1,3 +1,12 @@
 cmake-build-*
 .cmake-build-*
 .idea
+*.BIN
+*.bin
+.gitignore
+*.out
+orca_bringup/cfg/mav.parm
+orca_bringup/cfg/mav.tlog
+.gitignore
+orca_bringup/cfg/logs/LASTLOG.TXT
+orca_bringup/cfg/mav.tlog.raw

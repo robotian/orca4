@@ -113,7 +113,7 @@ def generate_launch_description():
 
     declare_slam_cmd = DeclareLaunchArgument(
         'slam',
-        default_value='True',
+        default_value='False',
         description='Launch SLAM?')
     
     start_rviz_cmd = ExecuteProcess(
@@ -178,7 +178,7 @@ def generate_launch_description():
             Node(
             package='orca_base',
             executable='camera_info_publisher',
-            name='left_info_publisher',
+            name='orca_left_info_publisher',
             output='screen',
             namespace=robot['name'],
             parameters=[{
@@ -192,7 +192,7 @@ def generate_launch_description():
             Node(
             package='orca_base',
             executable='camera_info_publisher',
-            name='right_info_publisher',
+            name='orca_right_info_publisher',
             output='screen',
             namespace=robot['name'],
             parameters=[{

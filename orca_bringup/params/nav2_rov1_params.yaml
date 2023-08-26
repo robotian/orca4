@@ -125,9 +125,9 @@
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: "rov1/scan"
+        observation_sources: "scan"
         scan:
-          topic: "/scan"
+          topic: "/rov1/scan"
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -161,7 +161,7 @@
         enabled: True
         observation_sources: "scan"
         scan:
-          topic: "/scan"
+          topic: "/rov1/scan"
           max_obstacle_height: 2.0
           clearing: True
           marking: True

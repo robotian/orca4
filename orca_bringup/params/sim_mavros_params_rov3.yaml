@@ -1,0 +1,118 @@
+# Connect to the FCU (ArduSub) and pass messages to/from the GCS (QGroundControl, mavproxy)
+#
+# See https://github.com/mavlink/mavros/tree/ros2/mavros for connection schemas and defaults
+#
+#     udp://[bind_host][:port]@[remote_host[:port]][/?ids=sysid,compid]
+#     udp default ports: 14555@14550
+#
+#     tcp://[server_host][:port][/?ids=sysid,compid]
+#     tcp default port: 5760
+
+/**/mavros:
+  ros__parameters:
+    system_id: 255
+
+    # /mavros/local_position/pose requires 2 plugins:
+    #     imu handles the ATTITUDE_QUATERNION msg (MAV id 31)
+    #     local_position handles the LOCAL_POSITION_NED msg (MAV id 32)
+    # Also be sure to set the message interval to ~50ms for these 2 messages
+
+    # The vision_pose plugin is provided by mavros_extras.
+    # MAVROS will not complain if this package is missing.
+
+    plugin_allowlist:
+      - sys_status
+      - command
+      - imu
+      - local_position
+      - rc_io
+      - setpoint_position
+      - vision_pose
+      # - time
+
+# /**/mavros/time:
+#   ros__parameters:
+#     time_ref_source: "fcu"  # time_reference source
+#     timesync_mode: "MAVLINK"
+#     timesync_avg_alpha: 0.6 # timesync averaging factor
+#     publish_sim_time: false
+
+
+/**/mavros_node:
+  ros__parameters:
+    fcu_url: "tcp://localhost:5780"    
+    gcs_url: "udp://@localhost:14580"
+    tgt_system: 3
+    tgt_component: 1
+    
+
+
+/**/mavros/local_position:
+  ros__parameters:
+    frame_id: "rov3/map"  # frame_id of /mavros/local_position/pose, etc.
+    tf:
+      send: false  # Do not publish tf
+
+/**/mavros/vision_pose:
+  ros__parameters:
+    tf:
+      listen: false  # Do not listen to tf
+
+
+
+# ### Newly added
+
+# # setpoint_position
+/**/mavros/setpoint_position:
+  ros__parameters:
+    tf.listen: false           # enable tf listener (disable topic subscribers)
+    tf.frame_id: "/rov3/map"
+    tf.child_frame_id: "/rov3/base_link"
+    tf.rate_limit: 50.0
+    mav_frame: LOCAL_NED  #GLOBAL_INT
+
+# # vision_pose_estimate
+# /**/mavros/vision_pose:
+#   ros__parameters:
+#     tf.listen: false           # enable tf listener (disable topic subscribers)
+#     tf.frame_id: "odom"
+#     tf.child_frame_id: "vision_estimate"
+#     tf.rate_limit: 10.0
+
+
+# /**/mavros/imu:
+#   ros__parameters:
+#     frame_id: base_link
+#     # need find actual values
+#     linear_acceleration_stdev: 0.0003
+#     angular_velocity_stdev: 0.0003490659 # 0.02 degrees
+#     orientation_stdev: 1.0
+#     magnetic_stdev: 0.0
+
+
+# # local_position
+# /**/mavros/local_position:
+#   ros__parameters:
+#     frame_id: "rov1/map"
+#     tf.send: false
+#     tf.frame_id: "rov1/map"
+#     tf.child_frame_id: "rov1/base_link"
+#     tf.send_fcu: false
+
+# # rc_io
+# # None
+
+
+# # command
+# /**/mavros/cmd:
+#   ros__parameters:
+#     use_comp_id_system_control: false # quirk for some old FCUs
+
+
+# # sys_status & sys_time connection options
+# /**/mavros/conn:
+#     ros__parameters:
+#       heartbeat_rate: 1.0    # send heartbeat rate in Hertz
+#       timeout: 10.0          # heartbeat timeout in seconds
+#       timesync_rate: 10.0    # TIMESYNC rate in Hertz (feature disabled if 0.0)
+#       system_time_rate: 1.0  # send system time to FCU rate in Hertz (disabled if 0.0)

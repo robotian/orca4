@@ -103,4 +103,5 @@ COMPASS_USE3 0        # Disable compass 3
 EK3_SRC1_YAW 6        # External nav
 
 # For multiple subs
-SYSID_THISMAV 2
+SYSID_THISMAV 2  #[rov2.mavros.mavros_router]: link[1000] detected remote address 2.1  
+#SYSID_MYGSC   255

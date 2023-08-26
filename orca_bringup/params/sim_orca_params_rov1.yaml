@@ -9,6 +9,7 @@
   ros__parameters:
     use_sim_time: False
     timer_rate: 20  # Motion model period
+    slam_timeout_ms: 2000
 
     # List frames for clarity:
     map_frame_id: "rov1/map"  # ArduSub EKF frame; mavros expects this to be "map"

@@ -51,8 +51,9 @@ def generate_launch_description():
     mavros_params_file = LaunchConfiguration('mavros_params_file')
     nav2_bt_file = os.path.join(orca_bringup_dir, 'behavior_trees', 'orca4_bt.xml')
     nav2_params_file = os.path.join(orca_bringup_dir, 'params', 'nav2_rov1_params.yaml')
-    orca_params_file = LaunchConfiguration('orca_params_file')
-    # orca_params_file = os.path.join(orca_bringup_dir, 'params', 'sim_orca_params_rov1.yaml')
+    
+    # orca_params_file = LaunchConfiguration('orca_params_file')
+    orca_params_file = os.path.join(orca_bringup_dir, 'params', 'sim_orca_params_rov1.yaml')
 
     # get_package_share_directory('orb_slam2_ros') will fail if orb_slam2_ros isn't installed
     orb_voc_file = os.path.join('install', 'orb_slam2_ros', 'share', 'orb_slam2_ros',
@@ -95,7 +96,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             'mavros_params_file',
-            default_value=os.path.join(orca_bringup_dir, 'params', 'sim_mavros_params.yaml'),
+            default_value=os.path.join(orca_bringup_dir, 'params', 'sim_mavros_params_rov1.yaml'),
             description='Full path to the ROS2 parameters file to use for mavros nodes',
         ),
 
@@ -107,7 +108,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             'orca_params_file',
-            default_value=os.path.join(orca_bringup_dir, 'params', 'sim_orca_params.yaml'),
+            default_value=os.path.join(orca_bringup_dir, 'params', 'sim_orca_params_rov1.yaml'),
             description='Full path to the ROS2 parameters file to use for Orca nodes',
         ),
 
@@ -130,13 +131,13 @@ def generate_launch_description():
                 mavros_params_file,
                 {
                     "fcu_url": "tcp://localhost",
-                    "gcs_url": "udp://@localhost:14550",                            
+                    "gcs_url": "udp://@localhost:14550",    
+                    # "tgt_system" : 1,
+                    # "tgt_component": 1,
+                    # "heartbeat_rate": 1.0,
+                    # "publish_sim_time": "false",                        
                 }
             ],
-            # parameters=[{
-            #     "fcu_url": "tcp://localhost",
-            #     "gcs_url": "udp://@localhost:14550"
-            # }],
             condition=IfCondition(LaunchConfiguration('mavros')),
         ),
 
@@ -145,22 +146,22 @@ def generate_launch_description():
             package='orca_base',
             executable='manager',
             output='screen',
-            name='manager',
+            name='manager', # node name should match the name in the config file
             namespace = namespace,
             parameters=[orca_params_file],
-            remappings=[
-                # Topic is hard coded in orb_slam2_ros to /orb_slam2_stereo_node/pose
-                ('camera_pose', 'orb_slam2_stereo_node/pose'),
-            ],
+            # remappings=[
+            #     # Topic is hard coded in orb_slam2_ros to /orb_slam2_stereo_node/pose
+            #     ('camera_pose', 'orb_slam2_stereo_node/pose'),
+            # ],
             condition=IfCondition(LaunchConfiguration('base')),
         ),
 
-        # Base controller and localizer; manage external nav input, publish tf2 transforms, etc.
+        # # Base controller and localizer; manage external nav input, publish tf2 transforms, etc.
         Node(
             package='orca_base',
             executable='base_controller',
             output='screen',
-            name='base_controller',
+            name='base_controller',  # node name should match the name in the config file
             parameters=[orca_params_file],
             namespace = namespace,
             remappings=[
@@ -170,7 +171,7 @@ def generate_launch_description():
             condition=IfCondition(LaunchConfiguration('base')),
         ),
 
-        # Replacement for base_controller: complete the tf tree
+        # # Replacement for base_controller: complete the tf tree
         ExecuteProcess(
             cmd=['/opt/ros/humble/lib/tf2_ros/static_transform_publisher',
                  '--frame-id', f"{tf_prefix}/map",
@@ -196,7 +197,7 @@ def generate_launch_description():
             condition=UnlessCondition(LaunchConfiguration('base')),
         ),
 
-        # Replacement for an URDF file: base_link->left_camera_link is static
+        # # Replacement for an URDF file: base_link->left_camera_link is static
         ExecuteProcess(
             cmd=['/opt/ros/humble/lib/tf2_ros/static_transform_publisher',
                  '--x', '-0.15',
@@ -208,7 +209,7 @@ def generate_launch_description():
             output='screen',
         ),
 
-        # Provide down frame to accommodate down-facing cameras
+        # # Provide down frame to accommodate down-facing cameras
         ExecuteProcess(
             cmd=['/opt/ros/humble/lib/tf2_ros/static_transform_publisher',
                  '--pitch', str(math.pi/2),
@@ -228,9 +229,11 @@ def generate_launch_description():
             }],
             namespace = namespace,
             remappings=[
-                ('/image_left/image_color_rect', 'stereo_left'),
-                ('/image_right/image_color_rect', 'stereo_right'),
-                ('/camera/camera_info', 'stereo_right/camera_info'),
+                ('image_left/image_color_rect', 'stereo_left'),
+                ('image_right/image_color_rect', 'stereo_right'),
+                ('camera/camera_info', 'stereo_right/camera_info'),
+                # ('stereo/left/camera_info','stereo_left/camera_info'),
+                # ('stereo/right/camera_info','stereo_right/camera_info')
             ],
             condition=IfCondition(LaunchConfiguration('slam')),
         ),

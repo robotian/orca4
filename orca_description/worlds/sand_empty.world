@@ -35,7 +35,8 @@
 <!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
         filename="gz-sim-buoyancy-system"
-        name="gz::sim::systems::Buoyancy">      
+        name="gz::sim::systems::Buoyancy">     
+        <!-- graded buoyancy works only for limited shapes... check it  -->
       <graded_buoyancy>
         <default_density>1000</default_density>
         <density_change>
@@ -51,7 +52,7 @@
 
     <include>
      <uri>model://sand_heightmap</uri>
-     <pose>0 7 -13 0 0 0</pose>
+     <pose>0 7 -12 0 0 0</pose>
     </include>
 
     <include>

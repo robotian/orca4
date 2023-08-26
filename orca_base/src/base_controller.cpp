@@ -246,6 +246,10 @@ class BaseController : public rclcpp::Node
 
     // Build/update the TF tree
     publish_tf(cxt_.map_frame_id_, cxt_.slam_frame_id_, tf_map_slam_);
+    // RCLCPP_INFO(get_logger(), "current slam tf %s", orca::str(tf_map_slam_).c_str());
+
+    // RCLCPP_INFO(get_logger(), "map frame id: %s, slam frame id: %s", const_cast<char*>(cxt_.map_frame_id_.c_str()), const_cast<char*>(cxt_.slam_frame_id_.c_str()));
+
     publish_tf(cxt_.map_frame_id_, cxt_.odom_frame_id_, tf_map_odom_);
     publish_tf(cxt_.odom_frame_id_, cxt_.base_frame_id_, tf_odom_base_);
 
@@ -418,6 +422,7 @@ public:
       },
       rmw_qos_profile_services_default);
 
+  // take command velocity as an input and use it to estimate and publish the rov pose
     cmd_vel_sub_ = create_subscription<geometry_msgs::msg::Twist>(
       "cmd_vel", reliable,
       [this](geometry_msgs::msg::Twist::ConstSharedPtr msg) -> void
