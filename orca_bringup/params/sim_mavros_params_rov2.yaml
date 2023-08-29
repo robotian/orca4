@@ -42,8 +42,10 @@
   ros__parameters:
     fcu_url: "tcp://localhost:5770"    
     gcs_url: "udp://@localhost:14570"
+    #gcs_url: ""
     tgt_system: 2
     tgt_component: 1
+    log_output: "screen"
     
 
 

@@ -32,33 +32,60 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
-
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 # Load Gazebo world model and run ArduSub plugin
 
 def generate_launch_description():
-    orca_description_dir = get_package_share_directory('orca_description')    
+    orca_description_dir = get_package_share_directory('orca_description')        
 
-    world_file = os.path.join(orca_description_dir, 'worlds', 'sand_empty.world')
+    pkg_ros_gz_sim = get_package_share_directory("ros_gz_sim")        
 
-    declare_gzclient_cmd = DeclareLaunchArgument(
-        'gzclient',
-        default_value='True',
-        description='Launch Gazebo UI?')
+    # Gazebo.
+    gz_sim_server = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")
+        ),
+        launch_arguments={
+            "gz_args": "-v3 -s -r "   # -v: option is for verbose level
+            + os.path.join(orca_description_dir, 'worlds', 'sand_empty.world')
+        }.items(),
+    )
+
+    gz_sim_gui = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")
+        ),
+        launch_arguments={"gz_args": "-v3 -g"}.items(),
+    )
+
+    ld = LaunchDescription()
+    ld.add_action(gz_sim_server)
+    ld.add_action(gz_sim_gui)
+
+
+    # world_file = os.path.join(orca_description_dir, 'worlds', 'sand_empty.world')
+    # declare_gzclient_cmd = DeclareLaunchArgument(
+    #     'gzclient',
+    #     default_value='True',
+    #     description='Launch Gazebo UI?')
     
 
-    start_gzsim_cmd =  ExecuteProcess(
-        cmd=['gz', 'sim', '-v', '3', '-r', world_file],
-        output='screen',
-        condition=IfCondition(LaunchConfiguration('gzclient')))
+    # start_gzsim_cmd =  ExecuteProcess(
+    #     cmd=['gz', 'sim', '-v', '3', '-r', world_file],
+    #     output='screen',
+    #     condition=IfCondition(LaunchConfiguration('gzclient')))
 
-    # Create the launch description and populate
-    ld = LaunchDescription()
-    ld.add_action(declare_gzclient_cmd)
-    ld.add_action(start_gzsim_cmd)
+    # # Create the launch description and populate
+    # ld = LaunchDescription()
+    # ld.add_action(declare_gzclient_cmd)
+    # ld.add_action(start_gzsim_cmd)
+
+
+    
 
     return ld
 

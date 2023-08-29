@@ -32,30 +32,33 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, GroupAction, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, GroupAction, SetEnvironmentVariable, IncludeLaunchDescription
 from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node
+from launch_ros.actions import Node, SetParameter
 from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     orca_bringup_dir = get_package_share_directory('orca_bringup')   
-    orca_description_dir = get_package_share_directory('orca_description')
+    orca_description_dir = get_package_share_directory('orca_description')    
 
+    set_use_sim_time = SetParameter(name='use_sim_time', value=False)
 
     # Start Gazebo with default underwater world
     spawn_world_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(orca_bringup_dir, 'launch', 'spawn_underwater_world.launch.py'))                       
         )
     
+    
+    
     robots = [
         {'name': 'rov1', 'x_pose': 0.0, 'y_pose': 0.0, 'z_pose': 0.0,
-                           'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0, 'console':'-I0','home':'33.810313,-118.39386700000001,0.0,270.0'},
-        {'name': 'rov2', 'x_pose': 3.0, 'y_pose': 3.0, 'z_pose': 0.0,
-                           'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0, 'console':'-I1','home':'33.810311,-118.39386700000001,0.0,270.0'},
-        {'name': 'rov3', 'x_pose': -3.0, 'y_pose': 3.0, 'z_pose': 0.0,
-                           'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0, 'console':'-I2','home':'33.810311,-118.39386700000001,0.0,270.0'}                           
+                           'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0, 'instance':'-I0','home':'33.810313,-118.39386700000001,0.0,270.0'},
+        # {'name': 'rov2', 'x_pose': 3.0, 'y_pose': 3.0, 'z_pose': 0.0,
+        #                    'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0, 'instance':'-I1','home':'33.810311,-118.39386700000001,0.0,270.0'},
+        # {'name': 'rov3', 'x_pose': -3.0, 'y_pose': 3.0, 'z_pose': 0.0,
+        #                    'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0, 'console':'-I2','home':'33.810311,-118.39386700000001,0.0,270.0'}                           
         ]
         
     
@@ -70,14 +73,16 @@ def generate_launch_description():
         # ardusub must be on the $PATH, see src/orca4/setup.bash
         start_ardusub_rov_cmd = ExecuteProcess(
             cmd=['ardusub', '-S', '-w', '-M', 'JSON', '--defaults', ardusub_rov_params_file,
-                robot['console'], '--home', robot['home']], 
+                robot['instance'], '--home', robot['home']], 
             output='screen')
+        
         # start_ardusub_rov_cmd = ExecuteProcess(
         #     cmd=['sim_vehicle.py','-C','-v','ArduSub','--sim-address=localhost','-I0','-w','--model','JSON','--no-mavproxy','--udp','--add-param-file',ardusub_rov_params_file],
         #     output='screen')
         # "mavproxy.py" "--out" "127.0.0.1:14550" "--master" "tcp:127.0.0.1:5760" "--sitl" "127.0.0.1:5501" "--map" "--console"
         # "mavproxy.py" "--out" "127.0.0.1:14560" "--master" "tcp:127.0.0.1:5770" "--sitl" "127.0.0.1:5511" "--map" "--console"
         
+        # spawn rov sdf model
         sdf_filepath = os.path.join(orca_description_dir, 'models', f"tethered_{robot['name']}", 'model_no_cable.sdf')        
         opt_str = ['sdf_filename:"{name}"'.format(name=sdf_filepath),
                    'name:"{rov_name}"'.format(rov_name=f"tethered_{robot['name']}"), 
@@ -94,13 +99,31 @@ def generate_launch_description():
             cmd=['gz', 'service', '-s', '/world/sand/create', '--reqtype', 'gz.msgs.EntityFactory',
                  '--reptype','gz.msgs.Boolean','--timeout','1000','--req',opt_str],                 
             output='screen')
+        
+
+        # start_gz_brdg_cmd = Node(
+        #     package='ros_gz_bridge',
+        #     executable='parameter_bridge',
+        #     namespace=robot['name'],
+        #     arguments=[
+        #         f"/model/tethered_{robot['name']}/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry"],
+        #     output='screen')
+        
+        # Gazebo Bridge.
         start_gz_brdg_cmd = Node(
-            package='ros_gz_bridge',
-            executable='parameter_bridge',
+            package="ros_gz_bridge",
+            executable="parameter_bridge",
             namespace=robot['name'],
-            arguments=[
-                f"/model/tethered_{robot['name']}/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry"],
-            output='screen')
+            parameters=[
+                {
+                    "config_file": os.path.join(
+                        orca_bringup_dir, "cfg", f"{robot['name']}_bridge.yaml" 
+                    ),
+                    "qos_overrides./tf_static.publisher.durability": "transient_local",
+                }
+            ],
+            output="screen",
+        )
         
         nav2_bt_file = os.path.join(orca_bringup_dir, 'behavior_trees', 'orca4_bt.xml')
         nav2_params_file = os.path.join(orca_bringup_dir, 'params', f"nav2_{robot['name']}_params.yaml")
@@ -158,12 +181,13 @@ def generate_launch_description():
         #         # 'slam': LaunchConfiguration('slam')
         #         }.items())
 
+        instances_cmds.append(set_use_sim_time)
         instances_cmds.append(start_ardusub_rov_cmd)
         instances_cmds.append(start_spawn_rov1_cmd)
         instances_cmds.append(start_gz_brdg_cmd)
         # instances_cmds.append(bringup_cmd)
         instances_cmds.append(set_env_var_cmd)
-        instances_cmds.append(start_mavros_cmd)
+        # instances_cmds.append(start_mavros_cmd)
 
     
     

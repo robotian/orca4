@@ -10,7 +10,7 @@
 
 /**/mavros:
   ros__parameters:
-    system_id: 255
+    system_id: 253
 
     # /mavros/local_position/pose requires 2 plugins:
     #     imu handles the ATTITUDE_QUATERNION msg (MAV id 31)
@@ -42,8 +42,11 @@
   ros__parameters:
     fcu_url: "tcp://localhost:5780"    
     gcs_url: "udp://@localhost:14580"
+    #gcs_url: ""
     tgt_system: 3
     tgt_component: 1
+    log_output: "screen"
+    #mavros_ns: "rov1"
     
 
 
