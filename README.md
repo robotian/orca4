@@ -43,7 +43,7 @@ Install these packages:
 * [Gazebo Garden 7.1.0](https://gazebosim.org/docs/garden/install)
 * [ardupilot_gazebo](https://github.com/ArduPilot/ardupilot_gazebo)
 * [ArduSub](https://ardupilot.org/dev/docs/building-setup-linux.html)
-* [MAVROS] (https://github.com/mavlink/mavros/tree/ros2)
+* [MAVROS] (https://github.com/mavlink/mavros/tree/ros2
 
 Build ArduSub for SITL:
 ~~~
