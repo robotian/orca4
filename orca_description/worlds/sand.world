@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="sand">
-
+    <!-- <physics name="500us" type="ignored">
+      <max_step_size>0.0005</max_step_size>
+      <real_time_factor>0</real_time_factor>
+    </physics> -->
     <!-- Base Gazebo plugins -->
     <plugin
         filename="gz-sim-physics-system"

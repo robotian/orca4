@@ -206,7 +206,7 @@ def generate_launch_description():
                 parameters=[
                     {
                         "config_file": os.path.join(
-                            orca_bringup_dir, "cfg", 'gz_param_bridge.yaml' 
+                            orca_bringup_dir, "cfg", 'orca4_bridge.yaml' 
                         ),
                         "qos_overrides./tf_static.publisher.durability": "transient_local",
                     }
