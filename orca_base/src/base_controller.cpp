@@ -246,6 +246,10 @@ class BaseController : public rclcpp::Node
 
     // Build/update the TF tree
     publish_tf(cxt_.map_frame_id_, cxt_.slam_frame_id_, tf_map_slam_);
+    // RCLCPP_INFO(get_logger(), "current slam tf %s", orca::str(tf_map_slam_).c_str());
+
+    // RCLCPP_INFO(get_logger(), "map frame id: %s, slam frame id: %s", const_cast<char*>(cxt_.map_frame_id_.c_str()), const_cast<char*>(cxt_.slam_frame_id_.c_str()));
+
     publish_tf(cxt_.map_frame_id_, cxt_.odom_frame_id_, tf_map_odom_);
     publish_tf(cxt_.odom_frame_id_, cxt_.base_frame_id_, tf_odom_base_);
 
@@ -387,15 +391,15 @@ public:
     reliable.reliable();
 
     ext_nav_pub_ = create_publisher<geometry_msgs::msg::PoseStamped>(
-      "/mavros/vision_pose/pose",
+      "mavros/vision_pose/pose",
       reliable);
     motion_pub_ = create_publisher<orca_msgs::msg::Motion>("motion", reliable);
     odom_pub_ = create_publisher<nav_msgs::msg::Odometry>("odom", reliable);
-    rc_pub_ = create_publisher<mavros_msgs::msg::OverrideRCIn>("/mavros/rc/override", reliable);
+    rc_pub_ = create_publisher<mavros_msgs::msg::OverrideRCIn>("mavros/rc/override", reliable);
 
     // Mavros listens to /mavros/setpoint_position/global with best_effort QoS
     setpoint_pub_ = create_publisher<geographic_msgs::msg::GeoPoseStamped>(
-      "/mavros/setpoint_position/global", best_effort);
+      "mavros/setpoint_position/global", best_effort);
 
     conn_srv_ = create_service<std_srvs::srv::SetBool>(
       "conn",
@@ -418,6 +422,7 @@ public:
       },
       rmw_qos_profile_services_default);
 
+  // take command velocity as an input and use it to estimate and publish the rov pose
     cmd_vel_sub_ = create_subscription<geometry_msgs::msg::Twist>(
       "cmd_vel", reliable,
       [this](geometry_msgs::msg::Twist::ConstSharedPtr msg) -> void
@@ -426,7 +431,7 @@ public:
       });
 
     ardu_pose_sub_ = create_subscription<geometry_msgs::msg::PoseStamped>(
-      "/mavros/local_position/pose", best_effort,
+      "mavros/local_position/pose", best_effort,
       [this](geometry_msgs::msg::PoseStamped::ConstSharedPtr msg) -> void
       {
         ardu_pose_cb(msg);
