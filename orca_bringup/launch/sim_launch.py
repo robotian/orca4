@@ -199,16 +199,21 @@ def generate_launch_description():
                 ('/camera_info', '/stereo_right/camera_info'),
             ],
         ),
-
-        # Publish ground truth pose from Ignition Gazebo
         Node(
-            package='ros_gz_bridge',
-            executable='parameter_bridge',
-            arguments=[
-                '/model/orca4/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
-            ],
-            output='screen'
-        ),
+                package="ros_gz_bridge",
+                executable="parameter_bridge",                
+                # namespace=rov_ns,  # not directly using Namespace
+                parameters=[
+                    {
+                        "config_file": os.path.join(
+                            orca_bringup_dir, "cfg", 'gz_param_bridge.yaml' 
+                        ),
+                        "qos_overrides./tf_static.publisher.durability": "transient_local",
+                    }
+                ],
+                # remappings=remappings,
+                output="screen",
+            ),
 
         # Bring up Orca and Nav2 nodes
         IncludeLaunchDescription(
