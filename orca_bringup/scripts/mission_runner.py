@@ -73,9 +73,9 @@ dive.poses.append(make_pose(x=0.0, y=0.0, z=-8.0))
 delay_loop = FollowWaypoints.Goal()
 delay_loop.poses.append(make_pose(x=0.0, y=0.0, z=-7.0))
 for _ in range(2):
-    delay_loop.poses.append(make_pose(x=20.0, y=-13.0, z=-7.0))
+    delay_loop.poses.append(make_pose(x=20.0, y=-13.0, z=-4.0))
     delay_loop.poses.append(make_pose(x=10.0, y=-23.0, z=-7.0))
-    delay_loop.poses.append(make_pose(x=-10.0, y=-8.0, z=-7.0))
+    delay_loop.poses.append(make_pose(x=-10.0, y=-8.0, z=-4.0))
     delay_loop.poses.append(make_pose(x=0.0, y=0.0, z=-7.0))
 
 
